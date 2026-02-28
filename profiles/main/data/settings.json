@@ -42,7 +42,6 @@
     "workbench.keybindings.rstudioKeybindings": true,
     "githubPullRequests.createOnPublishBranch": "never",
     "update.positron.channel": "dailies",
-    "positron.quarto.inlineOutput.enabled": true,
     "extensions.allowed": {
         "ms-python.black-formatter": false,
         "ms-python.debugpy": false,
@@ -51,10 +50,10 @@
         "charliermarsh.ruff": false,
         "*": true
     },
-    "quarto.cells.background.color": "useTheme",
     "quarto.visualEditor.markdownWrap": "sentence",
     "quarto.visualEditor.markdownReferences": "document",
     "positron.r.workspaceSymbols.includeCommentSections": true,
     "terminal.external.osxExec": "iTerm.app",
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "positron.quarto.inlineOutput.enabled": true
 }

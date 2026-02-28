@@ -5,10 +5,13 @@ OrhunUlusahin.praatvscode: '{"exePath":"/Applications/Praat.app/Contents/MacOS/P
 workbench.activity.pinnedViewlets2: '[{"id":"workbench.view.explorer","pinned":true,"visible":false,"order":0},{"id":"workbench.view.search","pinned":true,"visible":false,"order":1},{"id":"workbench.view.scm","pinned":true,"visible":false,"order":2},{"id":"workbench.view.debug","pinned":true,"visible":false,"order":3},{"id":"workbench.view.extensions","pinned":true,"visible":false,"order":4},{"id":"workbench.view.remote","pinned":true,"visible":false,"order":4},{"id":"workbench.view.chat.sessions","pinned":true,"visible":false,"order":6},{"id":"workbench.view.extension.test","pinned":true,"visible":false,"order":6},{"id":"workbench.view.extension.copilot-chat","pinned":true,"visible":false,"order":7},{"id":"workbench.view.extension.references-view","pinned":true,"visible":false,"order":9},{"id":"workbench.view.extension.context-inspector","pinned":true,"visible":false,"order":8},{"id":"workbench.view.extension.dvc-views","pinned":true,"visible":false,"order":13},{"id":"workbench.view.extension.tinymist-activitybar","pinned":true,"visible":false,"order":15},{"id":"workbench.view.extension.latex-workshop-activitybar","pinned":true,"visible":false,"order":12},{"id":"workbench.view.extension.posit-publisher","pinned":false,"visible":false,"order":16},{"id":"workbench.view.extension.github-pull-requests","pinned":true,"visible":false,"order":10},{"id":"workbench.view.extension.github-pull-request","pinned":true,"visible":false,"order":11},{"id":"workbench.panel.chat","pinned":false,"visible":false,"order":1},{"id":"workbench.viewContainer.positronPackages","pinned":true,"visible":false,"order":51},{"id":"workbench.panel.chatSidebar","pinned":true,"visible":false,"order":100},{"id":"workbench.view.extension.jupyter","pinned":true,"visible":false,"order":7}]'
 workbench.activity.placeholderViewlets: "[{\"id\":\"workbench.view.explorer\",\
   \"themeIcon\":{\"id\":\"explorer-view-icon\"},\"name\":\"Explorer\",\"isBuilt\
-  in\":true,\"views\":[{},{\"when\":\"timelineHasProvider\"}]},{\"id\":\"workbe\
-  nch.view.search\",\"themeIcon\":{\"id\":\"search-view-icon\"},\"name\":\"Sear\
-  ch\",\"isBuiltin\":true,\"views\":[{}]},{\"id\":\"workbench.view.scm\",\"them\
-  eIcon\":{\"id\":\"source-control-view-icon\"},\"name\":\"Source
+  in\":true,\"views\":[{},{},{},{\"when\":\"timelineHasProvider\"},{\"when\":\"\
+  npm:showScriptExplorer\"},{\"when\":\"config.catalogExplorer.enabled\"},{\"wh\
+  en\":\"dvc.commands.available &&
+  dvc.project.available\"},{\"when\":\"quarto.assistView.isEnabled\"}]},{\"id\":\
+  \"workbench.view.search\",\"themeIcon\":{\"id\":\"search-view-icon\"},\"name\
+  \":\"Search\",\"isBuiltin\":true,\"views\":[{}]},{\"id\":\"workbench.view.scm\
+  \",\"themeIcon\":{\"id\":\"source-control-view-icon\"},\"name\":\"Source
   Control\",\"isBuiltin\":true,\"views\":[{\"when\":\"scm.providerCount &&
   scm.providerCount != '0'\"},{},{\"when\":\"scm.historyProviderCount &&
   scm.historyProviderCount !=
@@ -19,39 +22,141 @@ workbench.activity.placeholderViewlets: "[{\"id\":\"workbench.view.explorer\",\
   'default'\"},{\"when\":\"debugUx ==
   'default'\"},{\"when\":\"loadedScriptsSupported && debugUx ==
   'default'\"},{\"when\":\"breakpointsExist || hasDebugged || debugUx ==
-  'default'\"}]},{\"id\":\"workbench.view.extensions\",\"themeIcon\":{\"id\":\"\
-  extensions-view-icon\"},\"name\":\"Extensions\",\"isBuiltin\":true,\"views\":\
-  []},{\"id\":\"workbench.view.remote\",\"themeIcon\":{\"id\":\"remote-explorer\
-  -view-icon\"},\"name\":\"Remote
-  Explorer\",\"isBuiltin\":true,\"views\":[]},{\"id\":\"workbench.view.chat.ses\
-  sions\",\"name\":\"Agent
+  'default'\"},{\"when\":\"debugType == 'pwa-chrome' || debugType ==
+  'pwa-msedge'\"},{\"when\":\"jsDebugHasExcludedCallers && debugType ==
+  'node-terminal' || jsDebugHasExcludedCallers && debugType == 'pwa-chrome' ||
+  jsDebugHasExcludedCallers && debugType == 'pwa-extensionHost' ||
+  jsDebugHasExcludedCallers && debugType == 'pwa-msedge' ||
+  jsDebugHasExcludedCallers && debugType ==
+  'pwa-node'\"},{\"when\":\"jsDebugNetworkAvailable\"}]},{\"id\":\"workbench.vi\
+  ew.extensions\",\"themeIcon\":{\"id\":\"extensions-view-icon\"},\"name\":\"Ex\
+  tensions\",\"isBuiltin\":true,\"views\":[{\"when\":\"defaultExtensionViews &&
+  extensionsGalleryStatus == 'accessDenied' || defaultExtensionViews &&
+  extensionsGalleryStatus == 'requiresSignIn' || searchMarketplaceExtensions &&
+  extensionsGalleryStatus == 'accessDenied' || searchMarketplaceExtensions &&
+  extensionsGalleryStatus ==
+  'requiresSignIn'\"},{\"when\":\"defaultExtensionViews\"},{\"when\":\"searchEx\
+  tensionUpdates ||
+  searchOutdatedExtensions\"},{\"when\":\"recommendedExtensions &&
+  workbenchState != 'empty'\"},{\"when\":\"defaultExtensionViews && hasGallery
+  && !hasInstalledExtensions\"},{\"when\":\"searchExtensionUpdates ||
+  searchRecentlyUpdatedExtensions\"},{\"when\":\"recommendedExtensions\"},{\"wh\
+  en\":\"defaultExtensionViews && hasGallery &&
+  !config.extensions.showRecommendationsOnlyOnDemand &&
+  !sortByUpdateDate\"},{\"when\":\"defaultExtensionViews &&
+  hasInstalledExtensions\"},{\"when\":\"defaultExtensionViews &&
+  hasInstalledMcpServers &&
+  !chatSetupHidden\"},{\"when\":\"config.chat.mcp.gallery.enabled &&
+  defaultExtensionViews && !chatSetupHidden && !hasInstalledMcpServers &&
+  mcpServersGalleryStatus == 'available' || config.chat.mcp.gallery.serviceUrl
+  && defaultExtensionViews && !chatSetupHidden && !hasInstalledMcpServers &&
+  mcpServersGalleryStatus == 'available' || defaultExtensionViews &&
+  !chatSetupHidden && !hasInstalledMcpServers && mcpServersGalleryStatus ==
+  'available' && productQualityType !=
+  'stable'\"},{\"when\":\"defaultExtensionViews && !chatSetupHidden &&
+  !config.chat.mcp.gallery.enabled && !config.chat.mcp.gallery.serviceUrl &&
+  !hasInstalledMcpServers && mcpServersGalleryStatus == 'available' &&
+  productQualityType == 'stable'\"},{\"when\":\"defaultExtensionViews &&
+  hasInstalledExtensions\"},{\"when\":\"hasGallery &&
+  searchMarketplaceExtensions\"},{\"when\":\"installedExtensions ||
+  searchInstalledExtensions\"},{\"when\":\"searchEnabledExtensions\"},{\"when\":\
+  \"searchDisabledExtensions\"},{\"when\":\"searchBuiltInExtensions\"},{\"when\
+  \":\"searchWorkspaceUnsupportedExtensions\"},{\"when\":\"builtInExtensions\"}\
+  ,{\"when\":\"builtInExtensions\"},{\"when\":\"builtInExtensions\"},{\"when\":\
+  \"searchUnsupportedWorkspaceExtensions\"},{\"when\":\"searchUnsupportedWorksp\
+  aceExtensions\"},{\"when\":\"searchUnsupportedWorkspaceExtensions &&
+  virtualWorkspace\"},{\"when\":\"searchUnsupportedWorkspaceExtensions &&
+  virtualWorkspace\"},{\"when\":\"searchDeprecatedExtensions\"},{\"when\":\"con\
+  fig.chat.mcp.gallery.enabled && searchMcpServers && !chatSetupHidden &&
+  mcpServersGalleryStatus == 'available' || config.chat.mcp.gallery.serviceUrl
+  && searchMcpServers && !chatSetupHidden && mcpServersGalleryStatus ==
+  'available' || searchMcpServers && !chatSetupHidden && mcpServersGalleryStatus
+  == 'available' && productQualityType !=
+  'stable'\"},{\"when\":\"searchMcpServers && !chatSetupHidden &&
+  !config.chat.mcp.gallery.enabled && !config.chat.mcp.gallery.serviceUrl &&
+  mcpServersGalleryStatus == 'available' && productQualityType ==
+  'stable'\"}]},{\"id\":\"workbench.view.remote\",\"themeIcon\":{\"id\":\"remot\
+  e-explorer-view-icon\"},\"name\":\"Remote
+  Explorer\",\"isBuiltin\":true,\"views\":[{},{\"when\":\"dev.containers.enabled
+  && !hideConnectCommands &&
+  !isInDevContainer\"}]},{\"id\":\"workbench.view.chat.sessions\",\"name\":\"Ag\
+  ent
   Sessions\",\"isBuiltin\":false},{\"id\":\"workbench.view.extension.test\",\"t\
   hemeIcon\":{\"id\":\"test-view-icon\"},\"name\":\"Testing\",\"isBuiltin\":tru\
   e,\"views\":[{\"when\":\"testing.providerCount >
   0\"},{\"when\":\"testing.isTestCoverageOpen\"}]},{\"id\":\"workbench.view.ext\
-  ension.copilot-chat\",\"name\":\"Chat
-  Debug\",\"isBuiltin\":false},{\"id\":\"workbench.view.extension.references-vi\
-  ew\",\"name\":\"References\",\"isBuiltin\":false},{\"id\":\"workbench.view.ex\
-  tension.context-inspector\",\"name\":\"Language Context
-  Inspector\",\"isBuiltin\":false},{\"id\":\"workbench.view.extension.dvc-views\
-  \",\"name\":\"DVC\",\"isBuiltin\":false},{\"id\":\"workbench.view.extension.t\
-  inymist-activitybar\",\"name\":\"Tinymist\",\"isBuiltin\":false},{\"id\":\"wo\
-  rkbench.view.extension.latex-workshop-activitybar\",\"name\":\"LaTeX\",\"isBu\
-  iltin\":false},{\"id\":\"workbench.view.extension.posit-publisher\",\"name\":\
-  \"Posit
-  Publisher\",\"isBuiltin\":false},{\"id\":\"workbench.view.extension.github-pu\
-  ll-requests\",\"name\":\"GitHub\",\"isBuiltin\":false},{\"id\":\"workbench.vi\
-  ew.extension.github-pull-request\",\"name\":\"GitHub Pull
-  Request\",\"isBuiltin\":false},{\"id\":\"workbench.panel.chat\",\"themeIcon\"\
-  :{\"id\":\"positron-assistant\"},\"name\":\"Chat\",\"isBuiltin\":true,\"views\
-  \":[{\"when\":\"chatExtensionInvalid || chatPanelParticipantRegistered ||
+  ension.copilot-chat\",\"iconUrl\":{\"$mid\":1,\"path\":\"/Applications/Positr\
+  on.app/Contents/Resources/app/extensions/positron-copilot-chat/assets/debug-i\
+  con.svg\",\"scheme\":\"file\"},\"name\":\"Chat
+  Debug\",\"isBuiltin\":false,\"views\":[{\"when\":\"github.copilot.chat.showLo\
+  gView\"}]},{\"id\":\"workbench.view.extension.references-view\",\"themeIcon\"\
+  :{\"id\":\"references\"},\"name\":\"References\",\"isBuiltin\":false,\"views\
+  \":[{\"when\":\"reference-list.isActive\"}]},{\"id\":\"workbench.view.extensi\
+  on.context-inspector\",\"themeIcon\":{\"id\":\"inspect\"},\"name\":\"Language
+  Context
+  Inspector\",\"isBuiltin\":false,\"views\":[{\"when\":\"github.copilot.chat.sh\
+  owContextInspectorView\"}]},{\"id\":\"workbench.view.extension.dvc-views\",\"\
+  iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/lakefs.lakefs-dvc-1.\
+  3.1-universal/resources/dvc-monochrome.svg\",\"scheme\":\"file\"},\"name\":\"\
+  DVC\",\"isBuiltin\":false,\"views\":[{\"when\":\"dvc.cli.incompatible ||
+  !dvc.commands.available ||
+  !dvc.project.available\"},{\"when\":\"true\"},{\"when\":\"dvc.commands.availa\
+  ble && dvc.project.available\"},{\"when\":\"dvc.commands.available &&
+  dvc.project.available\"},{\"when\":\"dvc.commands.available &&
+  dvc.project.available\"},{\"when\":\"dvc.commands.available &&
+  dvc.project.available\"},{},{\"when\":\"dvc.commands.available &&
+  dvc.project.available\"},{\"when\":\"dvc.commands.available &&
+  dvc.project.available\"}]},{\"id\":\"workbench.view.extension.tinymist-activi\
+  tybar\",\"iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/myriad-dre\
+  amin.tinymist-0.14.10-universal/icons/ti.png\",\"scheme\":\"file\"},\"name\":\
+  \"Tinymist\",\"isBuiltin\":false,\"views\":[{\"when\":\"ext.tinymistActivated\
+  \"},{\"when\":\"ext.tinymistActivated &&
+  ext.tinymistDevKit\"},{\"when\":\"ext.tinymistActivated\"},{\"when\":\"ext.ti\
+  nymistActivated\"},{\"when\":\"ext.tinymistActivated\"},{\"when\":\"ext.tinym\
+  istActivated\"},{\"when\":\"ext.tinymistActivated\"}]},{\"id\":\"workbench.vi\
+  ew.extension.latex-workshop-activitybar\",\"iconUrl\":{\"$mid\":1,\"path\":\"\
+  %%EXTENSION_DATA_PATH%%/james-yu.latex-workshop-10.13.1-universal/icons/activ\
+  ity-bar.svg\",\"scheme\":\"file\"},\"name\":\"LaTeX\",\"isBuiltin\":false,\"v\
+  iews\":[{\"when\":\"latex-workshop:enabled\"},{\"when\":\"latex-workshop:enab\
+  led\"},{\"when\":\"latex-workshop:enabled\"}]},{\"id\":\"workbench.view.exten\
+  sion.posit-publisher\",\"themeIcon\":{\"id\":\"posit-publisher-publish\"},\"n\
+  ame\":\"Posit
+  Publisher\",\"isBuiltin\":false,\"views\":[{\"when\":\"workbenchState ==
+  'empty' || workbenchState == 'workspace' || posit.publish.state ==
+  'uninitialized' && workbenchState ==
+  'folder'\"},{\"when\":\"posit.publish.state == 'initialized' && workbenchState
+  ==
+  'folder'\"}]},{\"id\":\"workbench.view.extension.github-pull-requests\",\"the\
+  meIcon\":{\"id\":\"github\"},\"name\":\"GitHub\",\"isBuiltin\":false,\"views\
+  \":[{\"when\":\"ReposManagerStateContext ==
+  'NeedsAuthentication'\"},{\"when\":\"!github:resolvingConflicts &&
+  ReposManagerStateContext !=
+  'NeedsAuthentication'\"},{\"when\":\"!github:resolvingConflicts &&
+  ReposManagerStateContext !=
+  'NeedsAuthentication'\"},{\"when\":\"!github:resolvingConflicts &&
+  ReposManagerStateContext !=
+  'NeedsAuthentication'\"},{\"when\":\"github:resolvingConflicts\"}]},{\"id\":\
+  \"workbench.view.extension.github-pull-request\",\"themeIcon\":{\"id\":\"git-\
+  pull-request\"},\"name\":\"GitHub Pull
+  Request\",\"isBuiltin\":false,\"views\":[{\"when\":\"github:createPullRequest
+  ||
+  github:revertPullRequest\"},{\"when\":\"github:createPullRequest\"},{\"when\":\
+  \"github:createPullRequest\"},{\"when\":\"github:inReviewMode &&
+  !github:createPullRequest &&
+  !github:revertPullRequest\"},{\"when\":\"github:focusedReview &&
+  github:inReviewMode && !github:createPullRequest && !github:revertPullRequest
+  && github:activePRCount <= 1\"},{\"when\":\"github:focusedReview &&
+  !github:stateValidated\"}]},{\"id\":\"workbench.panel.chat\",\"themeIcon\":{\
+  \"id\":\"positron-assistant\"},\"name\":\"Chat\",\"isBuiltin\":true,\"views\"\
+  :[{\"when\":\"chatExtensionInvalid || chatPanelParticipantRegistered ||
   !chatSetupDisabled &&
   !chatSetupHidden\"}]},{\"id\":\"workbench.viewContainer.positronPackages\",\"\
   themeIcon\":{\"id\":\"package\"},\"name\":\"Packages\",\"isBuiltin\":true,\"v\
   iews\":[{\"when\":\"config.positron.environments.enable\"}]},{\"id\":\"workbe\
   nch.panel.chatSidebar\",\"name\":\"Chat (Old
   Location)\",\"isBuiltin\":false},{\"id\":\"workbench.view.extension.jupyter\",\
-  \"name\":\"Jupyter\",\"isBuiltin\":false}]"
+  \"themeIcon\":{\"id\":\"notebook\"},\"name\":\"Jupyter\",\"isBuiltin\":false,\
+  \"views\":[]}]"
 workbench.activityBar.location: default
 workbench.auxiliaryBar.empty: "false"
 workbench.auxiliaryBar.lastNonMaximizedSize: "300"
@@ -72,13 +177,16 @@ workbench.auxiliarybar.placeholderPanels: "[{\"id\":\"workbench.panel.positronS\
   },\"name\":\"Viewer\",\"isBuiltin\":true,\"views\":[{}]},{\"id\":\"workbench.\
   viewContainer.agentSessions\",\"name\":\"Agent
   Sessions\",\"isBuiltin\":false},{\"id\":\"workbench.view.extension.positron-c\
-  onnections\",\"name\":\"Connections\",\"isBuiltin\":false},{\"id\":\"workbenc\
-  h.panel.chatEditing\",\"name\":\"Copilot
+  onnections\",\"iconUrl\":{\"$mid\":1,\"path\":\"/Applications/Positron.app/Co\
+  ntents/Resources/app/extensions/positron-connections/media/database.svg\",\"s\
+  cheme\":\"file\"},\"name\":\"Connections\",\"isBuiltin\":false,\"views\":[{\"\
+  when\":\"positron-connections.connectionsEnabled\"}]},{\"id\":\"workbench.pan\
+  el.chatEditing\",\"name\":\"Copilot
   Edits\",\"isBuiltin\":false},{\"id\":\"workbench.panel.chat\",\"name\":\"Chat\
   \",\"isBuiltin\":false}]"
 workbench.auxiliaryBar.size: "526"
 workbench.chat.hideMovedChatWelcomeView: "true"
-workbench.editor.languageDetectionOpenedLanguages.global: '[["ignore",true],["css",true],["html",true],["json",true],["scss",true],["markdown",true],["jsonc",true],["plaintext",true],["yaml",true],["r",true],["debian-control-file",true],["quarto",true]]'
+workbench.editor.languageDetectionOpenedLanguages.global: '[["ignore",true],["css",true],["scss",true],["jsonc",true],["debian-control-file",true],["markdown",true],["plaintext",true],["html",true],["yaml",true],["json",true],["r",true],["quarto",true]]'
 workbench.explorer.views.state.hidden: '[{"id":"outline","isHidden":false},{"id":"timeline","isHidden":false},{"id":"workbench.explorer.openEditorsView","isHidden":true},{"id":"workbench.explorer.emptyView","isHidden":false},{"id":"npm","isHidden":true},{"id":"quarto-assist","isHidden":false},{"id":"workbench.explorer.fileView","isHidden":false},{"id":"dvc.views.trackedExplorerTree","isHidden":false},{"id":"quartoWizard.extensionsInstalled","isHidden":false},{"id":"posit.publisher.project","isHidden":false},{"id":"posit.publisher.homeView","isHidden":false},{"id":"posit.publisher.logs","isHidden":false},{"id":"latex-workshop-commands","isHidden":false},{"id":"latex-workshop-structure","isHidden":false},{"id":"latex-workshop-snippet-view","isHidden":false},{"id":"catalog-explorer","isHidden":false},{"id":"dvc.views.welcome","isHidden":false},{"id":"dvc.views.actions","isHidden":false},{"id":"dvc.views.studio","isHidden":false},{"id":"dvc.views.experimentsColumnsTree","isHidden":false},{"id":"dvc.views.experimentsTree","isHidden":false},{"id":"dvc.views.plotsPathsTree","isHidden":false},{"id":"dvc.views.support","isHidden":false},{"id":"dvc.views.experimentsSortByTree","isHidden":false},{"id":"dvc.views.experimentsFilterByTree","isHidden":false}]'
 workbench.grid.size: '{"height":675,"width":956}'
 workbench.panel.alignment: center
@@ -89,12 +197,31 @@ workbench.panel.lastNonMaximizedWidth: "496"
 workbench.panel.markers.hidden: '[{"id":"workbench.panel.markers.view","isHidden":false,"order":1},{"id":"workbench.panel.repl.view","isHidden":false,"order":0}]'
 workbench.panel.output.hidden: '[{"id":"workbench.panel.output","isHidden":false}]'
 workbench.panel.pinnedPanels: '[{"id":"workbench.panel.positronConsole","pinned":true,"visible":false,"order":1},{"id":"workbench.panel.testResults","pinned":true,"visible":false,"order":3},{"id":"workbench.panel.markers","pinned":true,"visible":false,"order":3},{"id":"workbench.panel.output","pinned":true,"visible":false,"order":4},{"id":"~remote.forwardedPortsContainer","pinned":true,"visible":false,"order":5},{"id":"workbench.panel.repl","pinned":true,"visible":false,"order":5},{"id":"workbench.view.extension.jupyter-variables","pinned":true,"visible":false,"order":6},{"id":"workbench.view.extension.posit-publisher-logs","pinned":true,"visible":false,"order":7},{"id":"refactorPreview","pinned":true,"visible":false}]'
-workbench.panel.placeholderPanels: '[{"id":"workbench.panel.positronConsole","themeIcon":{"id":"positron-console-view-icon"},"name":"Console","isBuiltin":true,"views":[]},{"id":"workbench.panel.testResults","themeIcon":{"id":"test-results-icon"},"name":"Test
-  Results","isBuiltin":true,"views":[{"when":"testing.hasAnyResults"}]},{"id":"workbench.panel.markers","themeIcon":{"id":"markers-view-icon"},"name":"Problems","isBuiltin":true,"views":[{}]},{"id":"workbench.panel.output","themeIcon":{"id":"output-view-icon"},"name":"Output","isBuiltin":true,"views":[{}]},{"id":"~remote.forwardedPortsContainer","name":"Ports","isBuiltin":false},{"id":"workbench.panel.repl","themeIcon":{"id":"debug-console-view-icon"},"name":"Debug
-  Console","isBuiltin":true,"views":[{"when":"debuggersAvailable"}]},{"id":"workbench.view.extension.jupyter-variables","name":"Jupyter","isBuiltin":false},{"id":"workbench.view.extension.posit-publisher-logs","name":"Posit
-  Publisher
-  Log","isBuiltin":false},{"id":"refactorPreview","themeIcon":{"id":"refactor-preview-view-icon"},"name":"Refactor
-  Preview","isBuiltin":true,"views":[{"when":"refactorPreview.enabled"}]}]'
+workbench.panel.placeholderPanels: "[{\"id\":\"workbench.panel.positronConsole\
+  \",\"themeIcon\":{\"id\":\"positron-console-view-icon\"},\"name\":\"Console\",\
+  \"isBuiltin\":true,\"views\":[]},{\"id\":\"workbench.panel.testResults\",\"th\
+  emeIcon\":{\"id\":\"test-results-icon\"},\"name\":\"Test
+  Results\",\"isBuiltin\":true,\"views\":[{\"when\":\"testing.hasAnyResults\"}]\
+  },{\"id\":\"workbench.panel.markers\",\"themeIcon\":{\"id\":\"markers-view-ic\
+  on\"},\"name\":\"Problems\",\"isBuiltin\":true,\"views\":[{}]},{\"id\":\"work\
+  bench.panel.output\",\"themeIcon\":{\"id\":\"output-view-icon\"},\"name\":\"O\
+  utput\",\"isBuiltin\":true,\"views\":[{}]},{\"id\":\"~remote.forwardedPortsCo\
+  ntainer\",\"themeIcon\":{\"id\":\"ports-view-icon\"},\"name\":\"Ports\",\"isB\
+  uiltin\":true,\"views\":[{}]},{\"id\":\"workbench.panel.repl\",\"themeIcon\":{\
+  \"id\":\"debug-console-view-icon\"},\"name\":\"Debug
+  Console\",\"isBuiltin\":true,\"views\":[{\"when\":\"debuggersAvailable\"}]},{\
+  \"id\":\"workbench.view.extension.jupyter-variables\",\"themeIcon\":{\"id\":\
+  \"notebook\"},\"name\":\"Jupyter\",\"isBuiltin\":false,\"views\":[{\"when\":\
+  \"jupyter.hasNativeNotebookOrInteractiveWindowOpen\"},{\"when\":\"jupyter.has\
+  NativeNotebookOrInteractiveWindowOpen &&
+  jupyter:showTagsExplorer\"}]},{\"id\":\"workbench.view.extension.posit-publis\
+  her-logs\",\"themeIcon\":{\"id\":\"output\"},\"name\":\"Posit Publisher
+  Log\",\"isBuiltin\":false,\"views\":[{\"when\":\"posit.publish.state ==
+  'initialized' && workbenchState ==
+  'folder'\"}]},{\"id\":\"refactorPreview\",\"themeIcon\":{\"id\":\"refactor-pr\
+  eview-view-icon\"},\"name\":\"Refactor
+  Preview\",\"isBuiltin\":true,\"views\":[{\"when\":\"refactorPreview.enabled\"\
+  }]}]"
 workbench.panel.positronConnections.hidden: '[{"id":"workbench.panel.positronConnections","isHidden":false}]'
 workbench.panel.positronConsole.hidden: '[{"id":"workbench.panel.positronConsole","isHidden":false},{"id":"workbench.panel.positronVariables","isHidden":false},{"id":"workbench.panel.positronPlots","isHidden":false}]'
 workbench.panel.positronHelp.hidden: '[{"id":"workbench.panel.positronHelp","isHidden":false}]'
