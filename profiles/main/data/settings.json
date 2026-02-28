@@ -1,0 +1,54 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Monokai Vibrant",
+    "editor.fontFamily": "'DejaVu Sans Mono',Thale,'Agave Nerd Font Mono','Noto Serif Devanagari'",
+    "editor.fontSize": 14,
+    "markdown.preview.fontFamily": "Lato",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "git.defaultCloneDirectory": "~/repos/",
+    "github.gitProtocol": "ssh",
+    "editor.wordWrap": "on",
+    "quarto.visualEditor.spellingDictionary": "en_GB",
+    "editor.tabSize": 2,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "git.confirmSync": false,
+    "editor.accessibilitySupport": "off",
+    "redhat.telemetry.enabled": true,
+    "explorer.autoReveal": false,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.rulers": [
+        80
+    ],
+    "dvc.doNotShowSetupAfterInstall": true,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "positron.plots.darkFilter": "off",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "files.associations": {
+        "renv.lock": "json"
+    },
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "console.fontFamily": "'DejaVu Sans Mono',Thale,'Agave Nerd Font Mono','Noto Serif Devanagari'",
+    "workbench.keybindings.rstudioKeybindings": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "update.positron.channel": "dailies",
+    "positron.quarto.inlineOutput.enabled": true,
+    "extensions.allowed": {
+        "ms-python.black-formatter": false,
+        "ms-python.debugpy": false,
+        "ms-python.vscode-python-envs": false,
+        "meta.pyrefly": false,
+        "charliermarsh.ruff": false,
+        "*": true
+    }
+}

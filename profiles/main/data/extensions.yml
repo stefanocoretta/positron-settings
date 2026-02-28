@@ -1,0 +1,61 @@
+builtin:
+  disabled:
+    - vscode.r
+disabled:
+  - id: charliermarsh.ruff
+    uuid: c2ca9b43-fa38-44fc-928e-5125970b9c00
+  - id: meta.pyrefly
+    uuid: 53872426-67ef-4956-afb1-bdae83866fd2
+  - id: ms-python.black-formatter
+    uuid: 859e640c-c157-47da-8699-9080b81c8371
+  - id: ms-python.debugpy
+    uuid: 4bd5d2c9-9d65-401a-b0b2-7498d9f17615
+  - id: ms-python.vscode-python-envs
+    uuid: b41d8e8a-b6d4-4202-8f07-7189bdda81be
+enabled:
+  - id: bigyihsuan9999.lexurgy-syntax-highlighting
+    uuid: null
+  - id: DigitalBrainstem.javascript-ejs-support
+    uuid: 9cd87837-c82a-4817-9b79-1c84775aa158
+  - id: GitHub.vscode-pull-request-github
+    uuid: 69ddd764-339a-4ecc-97c1-9c4ece58e36d
+  - id: Its-Satyajit.monokai-vibrant-fork
+    uuid: bf3af884-1527-479f-ad92-57c7c3729cdb
+  - id: James-Yu.latex-workshop
+    uuid: 61d03280-3919-4dd1-bce1-178ca21fdeaf
+  - id: jeff-hykin.better-csv-syntax
+    uuid: 57b6bff2-1c0a-49a2-87df-aed227d5b9a6
+  - id: lakeFS.lakefs-dvc
+    uuid: c506a188-c245-4f90-8689-a2606263671d
+  - id: ms-toolsai.jupyter
+    uuid: 6c2f1801-1e7f-45b2-9b5c-7782f1e076e8
+  - id: ms-toolsai.jupyter-keymap
+    uuid: 9f6dc8db-620c-4844-b8c5-e74914f1be27
+  - id: ms-toolsai.vscode-jupyter-cell-tags
+    uuid: ab4fb32a-befb-4102-adf9-1652d0cd6a5e
+  - id: ms-toolsai.vscode-jupyter-slideshow
+    uuid: e153ca70-b543-4865-b4c5-b31d34185948
+  - id: myriad-dreamin.tinymist
+    uuid: e15002cc-f2ff-4c29-b86a-7504683a0369
+  - id: OrhunUlusahin.praatvscode
+    uuid: d2a7805a-a4d8-46a6-8c03-608981a19931
+  - id: Posit.air-vscode
+    uuid: 28c4f61c-37ea-41b1-845b-9e2bf586cce8
+  - id: posit.publisher
+    uuid: ccc4be7e-a835-4fcf-b439-79c25a0ae11e
+  - id: Posit.shiny
+    uuid: 7ffa9a66-85ab-44de-ab80-2eecce45b0fe
+  - id: quarto.quarto
+    uuid: a1be81fc-0f3a-4f2e-92ee-3fdc7ab96c73
+  - id: redhat.vscode-yaml
+    uuid: 2061917f-f76a-458a-8da9-f162de22b97e
+  - id: ReprEng.csv
+    uuid: f2e80b0c-f33b-40ca-a3a5-bdaf53823a83
+  - id: satokaz.vscode-markdown-header-coloring
+    uuid: 450767bd-b084-4308-9c93-2c1d82c9e4a0
+  - id: seatonjiang.gitmoji-vscode
+    uuid: d7b0c43a-5aaa-4181-9196-293551f7b37a
+  - id: sumneko.lua
+    uuid: 3a15b5a7-be12-47e3-8445-88ee3eabc8b2
+  - id: zokugun.cron-tasks
+    uuid: b7bbbbd5-7a39-4312-87aa-ef6a41de67fb
