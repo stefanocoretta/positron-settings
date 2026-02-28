@@ -55,5 +55,6 @@
     "quarto.visualEditor.markdownWrap": "sentence",
     "quarto.visualEditor.markdownReferences": "document",
     "positron.r.workspaceSymbols.includeCommentSections": true,
-    "terminal.external.osxExec": "iTerm.app"
+    "terminal.external.osxExec": "iTerm.app",
+    "files.insertFinalNewline": true
 }
