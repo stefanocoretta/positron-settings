@@ -14,11 +14,9 @@ disabled:
     uuid: b41d8e8a-b6d4-4202-8f07-7189bdda81be
 enabled:
   - id: bigyihsuan9999.lexurgy-syntax-highlighting
-    uuid: null
   - id: DigitalBrainstem.javascript-ejs-support
     uuid: 9cd87837-c82a-4817-9b79-1c84775aa158
   - id: GitHub.vscode-pull-request-github
-    uuid: 69ddd764-339a-4ecc-97c1-9c4ece58e36d
   - id: Its-Satyajit.monokai-vibrant-fork
     uuid: bf3af884-1527-479f-ad92-57c7c3729cdb
   - id: James-Yu.latex-workshop
@@ -31,6 +29,8 @@ enabled:
     uuid: 6c2f1801-1e7f-45b2-9b5c-7782f1e076e8
   - id: ms-toolsai.jupyter-keymap
     uuid: 9f6dc8db-620c-4844-b8c5-e74914f1be27
+  - id: ms-toolsai.jupyter-renderers
+    uuid: b15c72f8-d5fe-421a-a4f7-27ed9f6addbf
   - id: ms-toolsai.vscode-jupyter-cell-tags
     uuid: ab4fb32a-befb-4102-adf9-1652d0cd6a5e
   - id: ms-toolsai.vscode-jupyter-slideshow
@@ -40,11 +40,11 @@ enabled:
   - id: OrhunUlusahin.praatvscode
     uuid: d2a7805a-a4d8-46a6-8c03-608981a19931
   - id: Posit.air-vscode
-    uuid: 28c4f61c-37ea-41b1-845b-9e2bf586cce8
+  - id: posit.assistant
+    uuid: 63553199-a453-42e5-b4cf-bb510fadb2b0
   - id: posit.publisher
     uuid: ccc4be7e-a835-4fcf-b439-79c25a0ae11e
   - id: Posit.shiny
-    uuid: 7ffa9a66-85ab-44de-ab80-2eecce45b0fe
   - id: quarto.quarto
     uuid: a1be81fc-0f3a-4f2e-92ee-3fdc7ab96c73
   - id: redhat.vscode-yaml
