@@ -56,5 +56,10 @@
     "files.insertFinalNewline": true,
     "positron.quarto.inlineOutput.enabled": true,
     "update.positron.channel": "dailies",
-    "console.showNotebookConsoles": true
+    "console.showNotebookConsoles": true,
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.pdf": "positronPdfServer.previewEditor"
+    },
+    "chat.disableAIFeatures": false
 }
